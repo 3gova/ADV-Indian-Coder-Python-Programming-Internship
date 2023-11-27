@@ -1,0 +1,60 @@
+<html>
+    {% load static %}
+    <head>
+        <title>simple calculator</title>
+    </head>
+    <body align = "center">
+        
+        <div>
+            <h1><u>SIMPLE CALCULATOR</u></h1>
+            <form method="POST">
+                {{form.as_p}}
+                {% csrf_token %}
+                <button type="submit">Calculate</button>
+            </form>
+
+            {% if result %}
+                <h2>Result: {{result}}</h2>
+            {% endif %}
+        </div>
+        <style>
+            
+            body {
+                /* background-image: path(e:\Screenshots\bike.jpg); */
+                /* background-image: url(https://c4.wallpaperflare.com/wallpaper/21/1000/944/humor-minimalism-simple-blue-wallpaper-preview.jpg); */
+                /* background-image: url(https://c4.wallpaperflare.com/wallpaper/455/346/398/macro-blur-keyboard-laptop-wallpaper-thumb.jpg); */
+                background-image: linear-gradient(rgb(86, 86, 241), rgb(248, 248, 57), rgb(70, 241, 70)); */
+                background-attachment: fixed;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            button {
+                background-color: rgb(112, 1, 1);
+                padding: 12px 20px;
+                border-radius: 6px;
+                border: rgba(241, 5, 5, 0.979);
+                font-size: large;
+                font-weight: 1000;
+                color: white;    
+            }
+
+            form {
+                font-size: x-large;
+                font-weight: 1000;
+                font-family: sans-serif;   
+            }
+
+            h2 {
+                font-size: xx-large; 
+                
+            }
+
+            h1 {
+                font-size: xx-large;
+                font-family: 'Lucida Handwriting';
+            }
+      
+        </style>
+    </body>
+</html>
