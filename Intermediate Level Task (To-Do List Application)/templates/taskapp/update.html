@@ -1,0 +1,20 @@
+<html>
+    {%extends 'taskapp/base.html' %}
+    {%block content %}  
+      
+        <h1>Update Task details</h1>
+        <form method="POST">
+           {{form.as_p}}
+            {{tlist.as_p}}
+            {% csrf_token %}
+        
+        S.no. <input type="text" name="sno" value="{{tlist.sno}}"><br><br>
+        Task Name <input type="text" name="task_name" value="{{tlist.task_name}}"><br><br>
+        Status<input type="text" name="status" value="{{tlist.status}}"><br><br>
+        
+        <!--input type="submit" value = "UPDATE STUDENT"-->
+        <button type="submit">UPDATE TASK</button>
+        </form>
+        {%endblock %}
+
+</html>
